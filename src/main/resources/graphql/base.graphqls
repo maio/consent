@@ -1,0 +1,18 @@
+
+type Query {
+    version: String!
+    findUserById(id: Long): User
+    findUserByEmail(email: String): User
+}
+
+type Mutation {
+    createUser(firstName: String, lastName: String, username: String, email: String) : User
+}
+
+type User {
+    id: ID!
+    firstName: String
+    lastName: String
+    username: String
+    email: String
+}

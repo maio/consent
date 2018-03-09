@@ -1,0 +1,8 @@
+version: '2'
+services:
+  db:
+    image: postgres
+    volumes:
+      - "5432:5432"
+    volumes:
+      - "./data:/"
