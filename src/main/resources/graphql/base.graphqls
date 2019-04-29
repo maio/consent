@@ -1,4 +1,3 @@
-
 type Query {
     version: String!
     findUserById(id: Long): User
@@ -6,7 +5,14 @@ type Query {
 }
 
 type Mutation {
-    createUser(firstName: String, lastName: String, username: String, email: String) : User
+    createUser(newUser: UserInput) : User
+}
+
+input UserInput {
+    firstName: String
+    lastName: String
+    username: String
+    email: String
 }
 
 type User {
